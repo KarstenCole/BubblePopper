@@ -6,5 +6,8 @@ public class Cannon {
     final static int HEIGHT = 100;
 
     public Cannon(){
+
+
+
     }
 }
