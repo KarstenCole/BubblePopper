@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Runner {
     public static void main(String[] args){
 
-        ImageIcon icon = new ImageIcon("download.jpg");
+        ImageIcon icon = new ImageIcon("BlueBubble.png");
 
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
