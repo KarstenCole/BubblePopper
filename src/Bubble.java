@@ -1,4 +1,4 @@
 public class Bubble {
-    int width;
-    int height;
+    final static int WIDTH = 50;
+    final static int HEIGHT = 50;
 }
