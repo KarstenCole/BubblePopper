@@ -13,6 +13,8 @@ public class BubbleGrid {
     }
 
     public void drawGrid(Graphics g){
+
+  /*
         for (int i = 0; i < rowsVisible; i++){
             for (int k = 0; k < Grid[i].length; k++){
                 if (Grid[i][k] != null){
@@ -20,5 +22,7 @@ public class BubbleGrid {
                 }
             }
         }
+        */
+
     }
 }
