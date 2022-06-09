@@ -19,5 +19,7 @@ public class Runner {
         window.add(panel);
         window.setVisible(true);
 
+        //starts GameThread
+        panel.startGameThread();
     }
 }

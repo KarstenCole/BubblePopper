@@ -8,8 +8,8 @@ import java.util.Objects;
 
 public class Bubble{
 
-    final static int WIDTH = 50;
-    final static int HEIGHT = 50;
+    final static int WIDTH = 40;
+    final static int HEIGHT = 40;
 
     int X;
     int Y;
@@ -28,9 +28,8 @@ public class Bubble{
         setImage(color);
     }
 
-    public void draw(Graphics g){
-        g.setColor(Color.white);
-
+    public void draw(Graphics2D g2){
+        g2.drawImage(bubble,X,Y,WIDTH,HEIGHT,null);
     }
 
     public void setImage(String color){
