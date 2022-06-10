@@ -7,6 +7,10 @@ public class Cannon {
 
     public Cannon(){
 
+    }
+
+    public void NewBall(){
+
 
 
     }
