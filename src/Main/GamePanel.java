@@ -11,11 +11,11 @@ public class GamePanel extends JPanel implements Runnable{
 
     final int FPS = 60;
 
-    final static int PANEL_HEIGHT = 900;
-    final static int PANEL_WIDTH = 855;
+    public final static int PANEL_HEIGHT = 800;
+    public final static int PANEL_WIDTH = 445;
 
     BubbleGrid grid = new BubbleGrid();
-    ProjBubble projBubble = new ProjBubble("Green",PANEL_WIDTH/2,800);
+    ProjBubble projBubble = new ProjBubble("Green");
 
     Thread gameThread;
 

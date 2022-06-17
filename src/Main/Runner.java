@@ -9,7 +9,7 @@ public class Runner {
 
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setSize(855,900);
+        window.setSize(445,800);
         window.setResizable(false);
         window.setTitle("Bubble Popper");
         window.setIconImage(icon.getImage());

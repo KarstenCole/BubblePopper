@@ -19,7 +19,7 @@ public class BubbleGrid {
 
         // 20 BY 20 GRID THAT SYMBOLIZES THE COLORS WITH NUMBERS
 
-        int[][] grid = new int[20][20];
+        int[][] grid = new int[10][20];
 
         for(int x = 0; x < grid.length-1; x+=2){
             for(int y = 0; y < grid[x].length-3; y+=3){
