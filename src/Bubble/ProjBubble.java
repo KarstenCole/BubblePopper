@@ -1,13 +1,13 @@
 package Bubble;
 
-public class ProjBubble {
-    final static int WIDTH = 50;
-    final static int HEIGHT = 50;
+public class ProjBubble extends Bubble{
+    final static int WIDTH = 40;
+    final static int HEIGHT = 40;
 
 
 
-    public ProjBubble(){
-
+    public ProjBubble(String color, int x, int y){
+        super( color,  x,  y);
 
 
     }
