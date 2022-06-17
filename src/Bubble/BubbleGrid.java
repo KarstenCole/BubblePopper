@@ -1,5 +1,6 @@
 package Bubble;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.awt.*;
 
 public class BubbleGrid {
@@ -10,6 +11,7 @@ public class BubbleGrid {
     public BubbleGrid(){
         Grid = new Bubble[20][20];
         rowsVisible = 3;
+
         setGrid();
     }
 
@@ -17,25 +19,40 @@ public class BubbleGrid {
 
         // 20 BY 20 GRID THAT SYMBOLIZES THE COLORS WITH NUMBERS
 
-        int[][] grid = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+        int[][] grid = new int[20][20];
+
+        for(int x = 0; x < grid.length-1; x+=2){
+            for(int y = 0; y < grid[x].length-3; y+=3){
+                int number = (int)(Math.random() * 6) + 1;
+                grid[x][y] = number;
+                grid[x][y+1] = number;
+                grid[x+1][y] = number;
+
+                number = (int)(Math.random() * 6) + 1;
+                grid[x][y+2] = number;
+                grid[x+1][y+2] = number;
+                grid[x+1][y+1] = number;
+
+
+
+
+                /*
+                int number = (int)(Math.random() * 6) + 1;
+                System.out.println(number);
+                grid[x][y] = number;
+                //number = (int)(Math.random() * 5) + 1;
+                //grid[x][y+1] = number;
+                //number = (int)(Math.random() * 5) + 1;
+                //grid[x][y+2] = number;
+                 */
+            }
+        }
+        for(int x = 0; x < grid.length; x++){
+            for(int y = 0; y < grid[x].length; y++){
+                System.out.print(grid[x][y] + " ");
+            }
+            System.out.println();
+        }
 
         for(int x = 0; x < grid.length; x++){
             for(int y = 0; y < grid[0].length; y++){
